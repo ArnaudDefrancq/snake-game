@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    height: 100vh;
+    background: #ECF8F6;
+}
+
+.game-container {
+    text-align: center;
+    padding-top: 5%;
+    height: 100vh;
+}
+
+#game-board {
+    border: 3px solid black;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+}
+
+#score {
+    font-family: "lato";
+    font-size: 100px;
+}
+
+#reset {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+.snake {
+    position: absolute;
+    display: block;
+    height: 25px;
+    width: 25px;
+    background: greenyellow;
+    border: 2px solid black;
+    animation: move 2s forwards;
+}
+
+
+@keyframes move {
+    to {
+        transform: translateY(var(--moveY));
+        transform: translateX(var(--moveX));
+    }
+}
